@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Niner Coffee House</title>
+    <meta name="author" content="DeCristo Franceschini">
+    <link rel="icon" href="images/favicon.ico">
+
+    <h1>Niner Coffee House</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
 </head>
 <body>
-    
+    <img src="images/shop.jpg" style="width:400px; height:533px;" alt="image of a storefront">
+
+    <h2>Make a Reservation</h2>
+    <form action="#">
+        <input type="text" placeholder="name" required><br>
+        <input type="email" placeholder="email" required><br>
+        <input type="tel" placeholder="Phone Number" required><br>
+        <input type="number" placeholder="# Guests" min="1" max="20" style="width: 70px;" required><br>
+        <input type="datetime-local" required><br>
+        <textarea placeholder="Special Requests"></textarea><br>
+        <input type="submit" placeholder="Reserve">
+    </form>
+
 </body>
+<footer>
+    <p style="font-size: smaller;">©2024 Niner Coffee House. All rights reserved</p>
+</footer>
 </html>
