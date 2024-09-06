@@ -1,0 +1,36 @@
+/*CSS Reset and General Styles*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(#6d9773, #fff);
+    color: #0c3b23;
+    min-height: 100vh;
+}
+
+/*Header Area Styles*/
+
+
+
+/*Main Content Area Styles*/
+
+
+
+/*Footer Area Styles*/
+
+
+
+/*Home Page Styles*/
+
+
+
+/*Menu Page Styles*/
+
+
+
+/*Reservations Page Styles*/
