@@ -110,8 +110,75 @@ main a:hover {
     border-bottom: 2px solid #6d9773;
 }
 
-/*Menu Page Styles*/
 
+/*Menu Page Styles*/
+table {
+    width: 50%;
+    border: 3px solid #6d9773;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background-color: #6d9773;
+    color: white;
+
+}
+
+th, td {
+    text-align: center;
+    padding: 0.5em;
+}
+
+tr:nth-child(5) {
+    border-top: 3px solid #6D9773;
+}
+tr:nth-child(9) {
+    border-top: 3px solid #6D9773;
+}
+tr:nth-child(13) {
+    border-top: 3px solid #6D9773;
+}
+
+caption {
+    text-align: right;
+    font-style:italic;
+    font-weight: bold;
+}
 
 
 /*Reservations Page Styles*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+textarea {
+    border: 2px solid #0C3B2E;
+    margin-bottom: 0.5rem;
+    width: 60%;
+    padding: 0.6em;
+}
+
+textarea {
+    height: 8em;
+}
+
+input[type="submit"] {
+    background-color: #0c3b2e;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+
+
+/*Select the textarea element, and set the height to 8em. This gives users 8 rows of input before a scroll bar appears.
+Select the button, 
+set the background-color to #0c3b2e;
+set the color to white;
+set the font-size to 1.25rem; 
+make the text bolded;
+set the padding to 0.5em on the top and bottom and 1em on the left and right;
+set the border radius to 5px to get a round corner.*/
