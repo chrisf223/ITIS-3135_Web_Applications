@@ -1,0 +1,244 @@
+/*Variables*/ 
+:root {
+    --primary-color: #0c3b2e;
+    --primary-bg-color: #6d9773;
+    --light-color: #fff;
+    --pop-color: #ffba00;
+}
+
+/*================================================*/
+/*Reset and General Styles*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, var(--primary-bg-color), var(--light-color));
+    color: var(--primary-color);
+}
+
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header, footer{
+    background-color:  var(--primary-color);
+    color: white;
+}
+
+/*================================================*/
+/*Utility Classes*/
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.right-indent{
+    padding-left: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+/*================================================*/
+/*Overall layouts*/
+body {
+    display: grid;
+    grid-template-columns: auto 80% auto;
+    grid-template-rows: 6rem 1fr 3rem;
+}
+
+header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+}
+
+
+footer {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*================================================*/
+/*Header styles*/
+h1 {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+} 
+
+nav a {
+    color: white;
+}
+
+nav a:hover, 
+nav a:active{
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+/*================================================*/
+/*Header layouts*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*================================================*/
+/*Main styles*/
+
+main {
+    padding: 1rem;
+    background-color: var(--light-color);
+    grid-column: 2;
+    grid-row: 2
+}
+
+h2 {
+    color: var(--pop-color);
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/*================================================*/
+/*Home page content*/
+
+main li {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+ 
+}
+
+main a {
+    color: var(--primary-bg-color);
+}
+
+main a:hover,
+main a:active {
+    border-bottom: 2px solid var(--primary-bg-color);
+}
+/*================================================*/
+/*Menu page content*/
+
+table {
+    border: 3px solid var(--primary-bg-color);
+    border-collapse: collapse;
+    width: 100%;
+    margin-inline: auto;
+}
+
+thead tr {
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+th, 
+td {
+    padding: 0.3rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(4n) {
+    border-bottom: 3px solid var(--primary-bg-color);
+}
+
+caption {
+    font-weight: bold;
+    text-align: right;
+    font-style: italic; 
+}
+/*================================================*/
+/*Reservations page*/
+input[type="text"],
+input[type="email"], 
+input[type="tel"], 
+input[type="datetime-local"],
+input[type="number"],
+textarea{
+  border: 2px solid  var(--primary-color);
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0.6em;
+  
+}
+
+textarea {
+    height: 8em;
+}
+
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px; 
+  }
+/*================================================*/
+/*Style 'container-content' class*/
+.container-content {
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0px 5px 10px 0px rgba(17, 12, 46, 0.8);
+}
+/*================================================*/
+/*Main content area layouts*/
+main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 0.5rem;
+}
+
+.container-img, .container-content {
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+}
+/*================================================*/
+/*Footer layouts*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
