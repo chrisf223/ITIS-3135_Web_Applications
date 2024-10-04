@@ -22,7 +22,28 @@ blogs.forEach(blog=>{
  * @param {*} blog - a blog element
  */
 function addEntry(blog) {
+    const article = document.createElement('article');
+    article.classList.add('post');
+    
+    const titleElement = document.createElement('h3');
+    titleElement.classList.add('blog-header');
+    titleElement.textContent = blog.title;
+    article.appendChild(titleElement);
+    
+    const pDateElement = document.createElement('p');
+    pDateElement.classList.add('date');
+    pDateElement.textContent = new Date(blog.date).toLocaleDateString();
+    article.appendChild(pDateElement);
 
+    const pContentElement = document.createElement('p');
+    pContentElement.textContent = blog.content;
+    article.appendChild(pContentElement);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-btn');
+    deleteButton.textContent = "[x]";
+    titleElement.appendChild(deleteButton);
+
+    const postsContainer = document.querySelector('.posts');
+    postsContainer.appendChild(article);
 }
-

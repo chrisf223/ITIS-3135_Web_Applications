@@ -63,7 +63,22 @@ h2 {
   line-height: 1.5;
 }
 
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+}
 
+.delete-btn {
+  color: var(--second-bg-color);
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  font-weight: bold;
+}
 
 
 
