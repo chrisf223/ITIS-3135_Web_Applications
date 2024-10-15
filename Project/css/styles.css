@@ -16,29 +16,39 @@ body {
     grid-template-rows: 8rem 1fr;
 }  
 
+.main {
+    grid-row: 2;
+}
+
 /*Header Styles*/
 header {
     grid-row: 1;
     background-color: var(--uncc-green);
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 12% auto 24%;
     align-items: center;
 }
 
 .header-img {
     height: 4rem;
     width: auto;
-    margin: 0 20px 0 40px;
+    grid-column: 1;
 }
 
 header h1 {
     color: var(--uncc-gold);
     margin: 0 100px;
+    grid-column: 3;
 }
 
+.header-middle {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+}
 .header-a {
-    margin: 0 10px;
     background-color: white;
     color: var(--uncc-gold);
     min-width: 16rem;
@@ -50,10 +60,6 @@ header h1 {
 
 .header-a:hover {
     background-color: gainsboro;
-}
-
-.main {
-    grid-row: 2;
 }
 
 /*resources page */
