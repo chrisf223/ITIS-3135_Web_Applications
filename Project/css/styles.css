@@ -16,9 +16,15 @@ body {
     grid-template-rows: 8rem 1fr;
 }  
 
-.main {
+main {
     grid-row: 2;
 }
+
+h1 {
+    color: var(--uncc-gold);
+    font-size: xx-large;
+}
+
 
 /*Header Styles*/
 header {
@@ -40,6 +46,8 @@ header h1 {
     color: var(--uncc-gold);
     margin: 0 100px;
     grid-column: 3;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .header-middle {
@@ -61,6 +69,36 @@ header h1 {
 .header-a:hover {
     background-color: gainsboro;
 }
+
+
+/*home page*/
+.home-page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.home-text {
+    background-color: var(--uncc-green);
+    padding: 2rem;
+    color: var(--uncc-gold);
+    border-radius: 2rem;
+    grid-column: 1;
+    width: 30rem;
+    place-self: center;
+    margin-top: 2rem;
+}
+
+.home-image {
+    grid-column: 2;
+    height: 384px;
+    width: 34rem;
+    place-self: center;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    border: 3px solid var(--uncc-darker-gold);
+}
+
 
 /*resources page */
 .resources-grid {
