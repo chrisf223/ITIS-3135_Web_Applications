@@ -1,6 +1,8 @@
 :root {
     --uncc-green: rgb(0 80 53);
     --uncc-gold: rgb(164 150 101);
+    --uncc-darker-green: rgb(0 60 43);
+    --uncc-darker-gold: rgb(144 130 81);
 }
 
 * {
@@ -14,6 +16,7 @@ body {
     grid-template-rows: 8rem 1fr;
 }  
 
+/*Header Styles*/
 header {
     grid-row: 1;
     background-color: var(--uncc-green);
@@ -42,6 +45,7 @@ header h1 {
     border-radius: 1rem;
     padding: 1.5rem 0;
     text-decoration: none;
+    font-size: x-large;
 }
 
 .header-a:hover {
@@ -51,3 +55,36 @@ header h1 {
 .main {
     grid-row: 2;
 }
+
+/*resources page */
+.resources-grid {
+    display: grid;
+    grid-template-columns: 12% auto;
+    height: 100vh;
+}
+
+.resources-sidebar {
+    grid-column: 1;
+    background-color: var(--uncc-green);
+    display: flex;
+    flex-direction: column;
+}
+
+.resources-sidebar a {
+    color: var(--uncc-gold);
+    font-size: large;
+    width: 100%; 
+    padding: 5px 0;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.resources-sidebar a:hover {
+    background-color: var(--uncc-gold);
+    color: var(--uncc-green);
+}
+
+.resources-main {
+    grid-column: 2;
+}
+
