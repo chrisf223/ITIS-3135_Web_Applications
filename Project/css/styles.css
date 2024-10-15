@@ -1,0 +1,53 @@
+:root {
+    --uncc-green: rgb(0 80 53);
+    --uncc-gold: rgb(164 150 101);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 8rem 1fr;
+}  
+
+header {
+    grid-row: 1;
+    background-color: var(--uncc-green);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img {
+    height: 4rem;
+    width: auto;
+    margin: 0 20px 0 40px;
+}
+
+header h1 {
+    color: var(--uncc-gold);
+    margin: 0 100px;
+}
+
+.header-a {
+    margin: 0 10px;
+    background-color: white;
+    color: var(--uncc-gold);
+    min-width: 16rem;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+    text-decoration: none;
+}
+
+.header-a:hover {
+    background-color: gainsboro;
+}
+
+.main {
+    grid-row: 2;
+}
