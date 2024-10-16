@@ -206,6 +206,45 @@ footer p {
 }
 
 
+/*Study Groups*/
+.study-groups-page {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.study-groups-page p {
+    text-align: left;
+}
+
+.study-groups-grid {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.study-groups-inline {
+    display: inline-block;
+}
+
+.study-groups-grid a {
+    background-color: var(--uncc-green);
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    width: fit-content;
+}
+.study-groups-grid a:hover {
+    background-color: var(--uncc-gold);
+}
+
+.study-groups-temp-image {
+    height: auto;
+    width: 80%;
+}
+
+
 /*Contact*/
 .contact-page {
     margin-left: 10%;
