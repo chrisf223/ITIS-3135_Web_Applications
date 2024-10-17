@@ -14,10 +14,8 @@
 body {
     display: grid;
     grid-template-rows: 8rem 1fr 2rem;
-}  
-.body-fixed {
     position: fixed;
-}
+}  
 
 main {
     grid-row: 2;
@@ -33,33 +31,32 @@ h1 {
 header {
     grid-row: 1;
     background-color: var(--uncc-green);
-    width: 100vw;
     display: grid;
     grid-template-columns: 12% auto 24%;
+    width: 100vw;
     align-items: center;
-    position: sticky;
-    top: 0;
     border: 3px solid var(--uncc-darker-gold);
+    overflow-x: visible;
 }
 
 .header-img {
-    height: 4rem;
+    height: 5rem;
     width: auto;
     grid-column: 1;
 }
 
 header h1 {
     color: var(--uncc-gold);
-    margin: 0 100px;
     grid-column: 3;
     font-size: x-large;
     font-weight: bold;
+    font-family: "Alike",serif;
 }
 
 .header-middle {
     grid-column: 2;
     display: flex;
-    justify-content: space-between;
+    gap: 1.5rem;
     margin-left: 40px;
 }
 
@@ -153,12 +150,26 @@ footer p {
 
 .resources-main {
     grid-column: 2;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-bottom: 12rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: .88rem;
+    padding-right: 1.25rem;
 }
 .resources-main::-webkit-scrollbar {
-    display: none;
+    width: 12px;
+}
+.resources-main::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.resources-main::-webkit-scrollbar-thumb {
+    background: var(--uncc-gold); 
+    border-radius: 16px; 
+}
+
+.resources-main::-webkit-scrollbar-thumb:hover {
+    background: var(--uncc-darker-gold); 
 }
 
 .resources-section {
@@ -248,25 +259,80 @@ footer p {
 
 /*Class Study Groups*/
 .class-grid {
+    display: grid;
+    grid-template-columns: 12% auto;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.class-sidebar {
+    grid-column: 1;
+    background-color: var(--uncc-green);
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--uncc-darker-gold);
+    border-right: 3px solid var(--uncc-darker-gold);
+}
+
+.class-sidebar a {
+    color: var(--uncc-gold);
+    font-size: large;
+    width: 100%; 
+    padding: 5px 0;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.class-sidebar a:hover {
+    background-color: var(--uncc-gold);
+    color: var(--uncc-green);
+}
+
+.class-main {
+    grid-column: 2;
+    overflow-y: scroll;
+    margin-bottom: 12rem;
+    margin-left: 2rem;
+    margin-right: .88rem;
+    padding-right: 1.25rem;
+}
+.class-main::-webkit-scrollbar {
+    width: 12px;
+}
+.class-main::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.class-main::-webkit-scrollbar-thumb {
+    background: var(--uncc-gold); 
+    border-radius: 16px; 
+}
+
+.class-main::-webkit-scrollbar-thumb:hover {
+    background: var(--uncc-darker-gold); 
+}
+
+.class-section {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 1rem;
 }
-.class-grid h2 {
+
+.class-section h2 {
     color: var(--uncc-green);
     text-align: left;
     margin: 0px;
 }
-.class-grid p {
+.class-section p {
     text-align: left;
     margin-bottom: 10px;
 }
-.class-grid img {
+.class-section img {
     height: auto;
     width: 80%;
 }
-.class-grid a {
+.class-section a {
     background-color: var(--uncc-green);
     color: white;
     border-radius: 2rem;
@@ -275,8 +341,9 @@ footer p {
     width: fit-content;
     margin-bottom: 10px;
 }
-.class-grid a:hover {
+.class-section a:hover {
     background-color: var(--uncc-gold);
+    cursor: pointer;
 }
 
 
