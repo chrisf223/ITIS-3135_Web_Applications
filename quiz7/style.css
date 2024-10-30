@@ -93,6 +93,10 @@ header h1 {
     gap: 0.5rem;
 }
 
+.carousel-nav:hover {
+    cursor: pointer;
+}
+
 .nav-item {
     height: 11px;
     width: 11px;

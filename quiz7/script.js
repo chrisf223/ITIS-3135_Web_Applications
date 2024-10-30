@@ -5,10 +5,14 @@ const rightBtn = document.querySelector('.right');
 
 const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
 const navItems = Array.from(document.querySelectorAll('.nav-item'));
+const carouselNav = document.querySelector('.carousel-nav');
+
 const CAROUSEL_SIZE = carouselItems.length;
 
 leftBtn.addEventListener('click', swipe);
 rightBtn.addEventListener('click', swipe);
+carouselNav.addEventListener('click', navigateToImage);
+
 
 function swipe(e) {
     const currentCarouselItem = document.querySelector('.carousel-item.active');
@@ -41,4 +45,26 @@ function swipe(e) {
     currentCarouselItem.classList.remove('active');
     navItems[currentIndex].classList.remove('active');
 }
+
+function navigateToImage(e) {
+    const clickedDot = e.target.closest('.nav-item');
+    if (!clickedDot) return;
+
+    const clickedIndex = navItems.indexOf(clickedDot);
+    if (clickedDot.classList.contains('active')) return;
+
+    updateCarousel(clickedIndex);
+}
+
+function updateCarousel(index) {
+    const currentCarouselItem = document.querySelector('.carousel-item.active');
+    const currentIndex = carouselItems.indexOf(currentCarouselItem);
+
+    carouselItems[index].classList.add('active');
+    navItems[index].classList.add('active');
+    
+    currentCarouselItem.classList.remove('active');
+    navItems[currentIndex].classList.remove('active');
+}
+
 
