@@ -1,0 +1,42 @@
+{"teammembers":[
+	{
+		"full_name": "Agnes Agnew",
+		"first_name": "Agnes",
+		"image": "staff/agnes.gif",
+		"title": "Vice President of Accounting",
+		"bio": "With over 14 years of public accounting and business advisory service experience in the Tongas, Ecuador, Canada, Botswana and the US, Agnes is the most seasoned and diversed member of the Vecta Corp. team.",
+		"tag_line": "14 years of proficiency and still going strong"
+	},
+	{
+		"full_name": "Damon Dell",
+		"first_name": "Damon",
+		"image": "staff/damon.gif",
+		"title": "Director of Development",
+		"bio": "Damon is the Director of Development for Vecta Corp. Damon creates learning materials for Vecta Corp. as well as consulting for customers to integrate vSolutions into their production pipeline and business processes.",
+	    "tag_line": "We call him Dr. Development"
+	},
+	{
+		"full_name": "Herbert Huff",
+		"first_name": "Herbert",
+		"image": "staff/herbert.gif",
+		"title": "Director of Human Resources",
+		"bio": "Herbert joined Vecta Corp. in October 1999 as Vecta Corp's first Human Resources Director. As such, he has overall human resources responsibility for Vecta Corp's operations worldwide.",
+		"tag_line": "He humanizes our Human Resources department"
+	},
+	{
+		"full_name": "Mike Masters",
+		"first_name": "Mike",
+		"image": "staff/mike.gif",
+		"title": "Vice President of Sales and Marketing",
+		"bio": "Mike serves as the Vice President of Sales and Marketing for Vecta Corp. In this role Mike oversees Vecta Corp's marketing and corporate communications efforts worldwide.",
+		"tag_line": "Good products aren't enough. Mike makes sure they sell"
+	},
+	{
+		"full_name": "Wilbur Wilkes",
+		"first_name": "Wilbur",
+		"image": "staff/wilbur.gif",
+		"title": "Founder and CEO",
+		"bio": "While Wilbur is the founder and CEO of Vecta Corp, he is primarily known for being the pioneer and world leader of creating vSolutions.",
+		"tag_line": "Not only our founder, but also our primary software developer"
+	}
+]}
