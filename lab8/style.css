@@ -71,3 +71,52 @@ button:hover {
     color: #fff;
 
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(17, 12, 46, 0.8);
+}
+
+.card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card h3 {
+    text-align: center;
+    color: #6F4E37;
+    font-weight: 900;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.ingredients {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.ingredient {
+    background-color: #6F4E37;
+    color: #fff;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
