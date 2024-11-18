@@ -117,6 +117,54 @@ footer p {
     border: 3px solid var(--uncc-darker-gold);
 }
 
+/* Image Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 34rem; /* Set a maximum width */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
 
 /*resources page */
 .resources-grid {

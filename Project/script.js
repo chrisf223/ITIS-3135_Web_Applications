@@ -35,3 +35,34 @@ function toggleClass() {
     }
 }
 
+
+    const prevButton = document.querySelector('.left-btn');
+    const nextButton = document.querySelector('.right-btn');
+    const carouselImages = document.querySelector('.carousel-images');
+    const images = document.querySelectorAll('.carousel-images img');
+    
+    let currentIndex = 0;
+
+    // Show the next image
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back to the first image
+        }
+        updateCarousel();
+    });
+
+    // Show the previous image
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = images.length - 1; // Loop back to the last image
+        }
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
