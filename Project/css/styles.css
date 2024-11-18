@@ -121,9 +121,10 @@ footer p {
 /*resources page */
 .resources-grid {
     display: grid;
-    grid-template-columns: 12% auto;
+    grid-template-columns: 1fr auto;
     height: 100vh;
     gap: 1rem;
+    transition: grid-template-columns 0.3s ease;
 }
 
 .resources-sidebar {
@@ -133,6 +134,8 @@ footer p {
     flex-direction: column;
     border-left: 3px solid var(--uncc-darker-gold);
     border-right: 3px solid var(--uncc-darker-gold);
+    width: 200px; /* Default width */
+    transition: width 0.3s ease; /* Smooth transition when resizing */
 }
 
 .resources-sidebar a {
@@ -148,6 +151,30 @@ footer p {
     color: var(--uncc-green);
 }
 
+.resources-sidebar.collapsed {
+    width: 50px; /* Collapsed width */
+}
+.resources-sidebar.collapsed a {
+    display: none;
+}
+
+/* Button styling */
+.toggle-btn {
+    background-color: var(--uncc-green);
+    color: var(--uncc-gold);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.toggle-btn:hover {
+    background-color: var(--uncc-gold);
+    color: var(--uncc-green);
+}
+
 .resources-main {
     grid-column: 2;
     overflow-y: scroll;
@@ -155,6 +182,7 @@ footer p {
     margin-left: 2rem;
     margin-right: .88rem;
     padding-right: 1.25rem;
+    transition: margin-left 0.3s ease; /* Smooth transition when the sidebar collapses */
 }
 .resources-main::-webkit-scrollbar {
     width: 12px;
@@ -260,9 +288,10 @@ footer p {
 /*Class Study Groups*/
 .class-grid {
     display: grid;
-    grid-template-columns: 12% auto;
+    grid-template-columns: 1fr auto;
     height: 100vh;
     gap: 1rem;
+    transition: grid-template-columns 0.3s ease;
 }
 
 .class-sidebar {
@@ -272,6 +301,8 @@ footer p {
     flex-direction: column;
     border-left: 3px solid var(--uncc-darker-gold);
     border-right: 3px solid var(--uncc-darker-gold);
+    width: 200px; 
+    transition: width 0.3s ease; 
 }
 
 .class-sidebar a {
@@ -287,6 +318,13 @@ footer p {
     color: var(--uncc-green);
 }
 
+.class-sidebar.collapsed {
+    width: 50px; 
+}
+.class-sidebar.collapsed a {
+    display: none;
+}
+
 .class-main {
     grid-column: 2;
     overflow-y: scroll;
@@ -294,6 +332,7 @@ footer p {
     margin-left: 2rem;
     margin-right: .88rem;
     padding-right: 1.25rem;
+    transition: margin-left 0.3s ease;
 }
 .class-main::-webkit-scrollbar {
     width: 12px;
