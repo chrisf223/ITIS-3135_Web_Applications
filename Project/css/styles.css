@@ -106,6 +106,15 @@ footer p {
     margin-top: 2rem;
 }
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 34rem; 
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
 .home-image {
     grid-column: 2;
     height: 384px;
@@ -117,26 +126,19 @@ footer p {
     border: 3px solid var(--uncc-darker-gold);
 }
 
-/* Image Carousel */
-.carousel-container {
-    position: relative;
+.carousel-images img{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 34rem; /* Set a maximum width */
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 2rem;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img {
-    width: 100%;
-    height: auto;
     object-fit: cover;
+    opacity: 0; 
+    transition: 0.5s opacity ease-in-out;
     border-radius: 2rem;
+    height: 384px;
+}
+.carousel-images img.active {
+    opacity: 1; 
 }
 
 .carousel-btn {
@@ -182,8 +184,8 @@ footer p {
     flex-direction: column;
     border-left: 3px solid var(--uncc-darker-gold);
     border-right: 3px solid var(--uncc-darker-gold);
-    width: 200px; /* Default width */
-    transition: width 0.3s ease; /* Smooth transition when resizing */
+    width: 200px; 
+    transition: width 0.3s ease; 
 }
 
 .resources-sidebar a {
@@ -200,7 +202,7 @@ footer p {
 }
 
 .resources-sidebar.collapsed {
-    width: 50px; /* Collapsed width */
+    width: 50px; 
 }
 .resources-sidebar.collapsed a {
     display: none;
@@ -230,7 +232,7 @@ footer p {
     margin-left: 2rem;
     margin-right: .88rem;
     padding-right: 1.25rem;
-    transition: margin-left 0.3s ease; /* Smooth transition when the sidebar collapses */
+    transition: margin-left 0.3s ease; 
 }
 .resources-main::-webkit-scrollbar {
     width: 12px;

@@ -1,13 +1,10 @@
-
+// Sidbar Expanding and Collapsing
 const resourcesButton = document.getElementById('toggle-resources-sidebar');
-if (resourcesButton) {
-    resourcesButton.addEventListener('click', toggleResources);
-}
+resourcesButton?.addEventListener('click', toggleResources);
+
 
 const classButton = document.getElementById('toggle-class-sidebar');
-if (classButton) {
-    classButton.addEventListener('click', toggleClass);
-}
+classButton?.addEventListener('click', toggleClass);
 
 function toggleResources() {
     const sidebar = document.querySelector('.resources-sidebar');
@@ -35,34 +32,36 @@ function toggleClass() {
     }
 }
 
+//Home Image Carousel
+const prevButton = document.querySelector('.left-btn');
+prevButton?.addEventListener('click', previousImage);
 
-    const prevButton = document.querySelector('.left-btn');
-    const nextButton = document.querySelector('.right-btn');
-    const carouselImages = document.querySelector('.carousel-images');
-    const images = document.querySelectorAll('.carousel-images img');
-    
-    let currentIndex = 0;
+const nextButton = document.querySelector('.right-btn');
+nextButton?.addEventListener('click', nextImage);
 
-    // Show the next image
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < images.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop back to the first image
-        }
-        updateCarousel();
-    });
+const images = document.querySelectorAll('.carousel-images img');
+let currentIndex = 0; 
+images && images[currentIndex]?.classList.add('active');
 
-    // Show the previous image
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = images.length - 1; // Loop back to the last image
-        }
-        updateCarousel();
-    });
+let intervalId;
+resetInterval();
 
-    function updateCarousel() {
-        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+function nextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+    resetInterval();
+}
+
+function previousImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].classList.add('active');
+    resetInterval();
+}
+
+function resetInterval() {
+    clearInterval(intervalId);  
+    intervalId = setInterval(nextImage, 5000);  
+}
+
