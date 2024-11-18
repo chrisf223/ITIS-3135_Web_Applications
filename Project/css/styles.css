@@ -208,7 +208,6 @@ footer p {
     display: none;
 }
 
-/* Button styling */
 .toggle-btn {
     background-color: var(--uncc-green);
     color: var(--uncc-gold);
@@ -277,24 +276,58 @@ footer p {
     width: 80%;
 }
 
-.resources-links {
+.resources-dropdown {
     grid-column: 1;
     grid-row: 2;
     display: flex;
     flex-direction: column;
 }
-.resources-links p {
+.resources-dropdown button {
+    background-color: white;
+    border-radius: 1rem;
     color: var(--uncc-gold);
     text-align: left;
     font-size: large;
+    border: 2px solid var(--uncc-gold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
 }
-.resources-links a {
-    color: black;
-    margin-left: 0.5rem;
-    text-align: left;
-    margin-bottom: 3px;
+.resources-dropdown button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.resources-dropdown button.active {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
+.resources-links {
+    max-height: 0; 
+    overflow: hidden; 
+    display: block;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    transition: max-height 0.5s ease-in-out, border 0.5s ease-in-out; 
+}
+.resources-links.show {
+    height: auto;
+    display: block;
+    max-height: 500px;
+    border: 2px solid var(--uncc-gold);
+}
+
+.resources-links a {
+    color: var(--uncc-gold);
+    margin-bottom: 3px;
+    display: block;
+    margin-left: 0.5rem;
+    text-align: left;
+}
+
+.chevron-icon {
+    margin-right: 0.5rem;
+}
 
 /*Study Groups*/
 .study-groups-page {

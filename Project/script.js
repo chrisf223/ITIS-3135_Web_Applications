@@ -13,9 +13,9 @@ function toggleResources() {
     sidebar.classList.toggle('collapsed');
     
     if (sidebar.classList.contains('collapsed')) {
-        button.textContent = '→';  
+        button.textContent = '»';  
     } else {
-        button.textContent = '←';  
+        button.textContent = '«';  
     }
 } 
 
@@ -26,11 +26,12 @@ function toggleClass() {
     sidebar.classList.toggle('collapsed');
     
     if (sidebar.classList.contains('collapsed')) {
-        button.textContent = '→';  
+        button.textContent = '»';  
     } else {
-        button.textContent = '←';  
+        button.textContent = '«';  
     }
 }
+
 
 //Home Image Carousel
 const prevButton = document.querySelector('.left-btn');
@@ -65,3 +66,23 @@ function resetInterval() {
     intervalId = setInterval(nextImage, 5000);  
 }
 
+
+//Resources Page Resource Dropdown
+const dropButtons = document.querySelectorAll('.resources-dropdown button');
+dropButtons?.forEach(button => {
+    button.addEventListener('click', toggleDropdown);
+});
+
+function toggleDropdown(event) {
+    const linksContainer = event.target.closest('.resources-dropdown').querySelector('.resources-links');
+    linksContainer?.classList.toggle('show');
+    
+    const chevron = event.target.querySelector('.chevron-icon');
+    if (linksContainer.classList.contains('show')) {
+        chevron.textContent = '︽';
+        event.target.classList.add('active');  
+    } else {
+        chevron.textContent = '︾'; 
+        event.target.classList.remove('active');  
+    }
+}
