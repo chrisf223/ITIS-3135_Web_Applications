@@ -330,12 +330,42 @@ footer p {
 }
 
 /*Study Groups*/
+.study-groups-main {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100vh;
+    margin-right: .88rem;
+    margin-left: .88rem;
+}
 .study-groups-page {
-    margin-left: 10%;
-    margin-right: 10%;
+    overflow-y: scroll;
+    margin-bottom: 12rem;
+    grid-column: 1;
 }
 .study-groups-page p {
     text-align: left;
+}
+
+.study-groups-page::-webkit-scrollbar {
+    width: 12px;
+}
+
+.study-groups-page::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.study-groups-page::-webkit-scrollbar-thumb {
+    background: var(--uncc-gold); 
+    border-radius: 16px; 
+}
+
+.study-groups-page::-webkit-scrollbar-thumb:hover {
+    background: var(--uncc-darker-gold); 
+}
+
+.study-groups-margins {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .study-groups-grid {
