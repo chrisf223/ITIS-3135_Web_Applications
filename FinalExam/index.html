@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Feedbacks</title>
+</head>
+<body>
+    <main class="flex" id="main">
+        <div class="card">
+            <form id="submitForm">
+                <h3>How would you rate our service?</h3>
+                <label for="rating">Rating</label>
+                <input id="rating" type="number" placeholder="1-5" min="1" max="5" required>
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" placeholder="What can we do to improve?" minlength="10" required></textarea>
+                <button id="submitButton">Send Your Feedback</button>
+            </form>
+        </div>
+    
+        <div id="stats">
+         <h4><span id="total">2</span> Reviews</h4>
+         <h4>Ratings Average: <span id="average">4.5</span></h4>   
+        </div>
+    
+        <div class="card rating-item flex">
+            <div class="star-container">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="feedback">Everything is great! Strongly recommend!</div>
+        </div>
+    
+        <div class="card rating-item flex">
+            <div class="star-container">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="feedback">Reasonable price. Friendly service.</div>
+        </div>
+        
+    </main>
+    
+</body>
+</html>

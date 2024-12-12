@@ -22,7 +22,6 @@ async function getStaff(){
 
 function showStaff(data){
 	container.innerHTML = '';
-
 	data.teammembers.forEach(member=>{
 		const image = document.createElement('img');
 		image.src = member.image;
